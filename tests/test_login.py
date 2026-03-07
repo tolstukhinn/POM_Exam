@@ -11,4 +11,3 @@ class TestLogin(BaseTest):
             login=self.credentials.LOGIN,
             password=self.credentials.PASSWORD
         )
-        time.sleep(10)
