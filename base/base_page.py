@@ -16,7 +16,7 @@ class BasePage(metaclass=MetaLocator):
 
     def open(self):
 
-        with allure.step(f"Open {self._PAGE_URL} page"):
+        with allure.step(f"01. Открытие страницы авторизации {self._PAGE_URL} "):
 
             self.driver.get(self._PAGE_URL)
 
