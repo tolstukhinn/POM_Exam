@@ -16,9 +16,14 @@ class BasePage(metaclass=MetaLocator):
 
     def open(self):
 
-        with allure.step(f"01. Открытие страницы авторизации {self._PAGE_URL} "):
+        with allure.step(f"01. Открытие страницы авторизации."):
 
             self.driver.get(self._PAGE_URL)
+            allure.attach(
+                body=self.driver.get_screenshot_as_png(),
+                name="Открытие login page",
+                attachment_type=allure.attachment_type.PNG,
+            )
 
     def is_opened(self):
 

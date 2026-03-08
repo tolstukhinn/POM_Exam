@@ -13,6 +13,7 @@ class HomePage(BasePage):
     def sort(self):
 
         self.wait.until(EC.element_to_be_clickable(self._DROPDOWN_ELEMENT)).click()
+
         self.wait.until(EC.element_to_be_clickable(self._SORT_ELEMENT)).click()
 
     _BACKPACK = "//button[@id='add-to-cart-sauce-labs-backpack']"
